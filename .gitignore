@@ -1,0 +1,8 @@
+.idea/
+*.iml
+*/target/
+*-local.yml
+
+*.DS_Store
+*rebel.xml
+/service/src/main/resources/logback-local.xml

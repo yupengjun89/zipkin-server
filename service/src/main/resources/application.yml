@@ -1,0 +1,52 @@
+server:
+    port: 9411
+    tomcat:
+        accesslog:
+            directory: /var/log/user
+            prefix: access_log_${HOSTNAME}
+            enabled: true
+            pattern: "%h %l %u %t \"%r\" %s %b %D"
+        max-threads: 2000
+        max-connections: 3000
+        accept-count: 2000
+        uri-encoding: UTF-8
+management:
+    port: 0
+    security:
+        enabled: false
+
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://bjzoo-1:9999/eureka/,http://bjzoo-2:9999/eureka/,http://bjzoo-3:9999/eureka/
+    instance:
+        lease-expiration-duration-in-seconds: 30
+        lease-renewal-interval-in-seconds: 10
+        prefer-ip-address: true
+spring:
+    application:
+        name: zipkin-server
+    cloud:
+        stream:
+            kafka:
+                binder:
+                    brokers: 172.25.5.129,172.25.5.130,172.25.5.131
+                    zkNodes: 172.25.5.116,172.25.5.117,172.25.5.118
+            bindings:
+                sleuth:
+                    destination: sleuth-prd
+    datasource:
+        #schema: classpath:/sql/mysql.sql
+        url: jdbc:mysql://127.0.0.1:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password:
+        continueOnError: true
+        driver-class-name: com.mysql.jdbc.Driver
+        initial-size: 100
+        max-active: 200
+        min-idle: 100
+
+#zipkin存储类型：mysql
+zipkin:
+    storage:
+        type: mysql

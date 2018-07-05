@@ -1,0 +1,22 @@
+eureka:
+    instance:
+          preferIpAddress: false
+
+spring:
+    cloud:
+        stream:
+            bindings:
+                sleuth:
+                    destination: sleuth-stage
+    datasource:
+#        schema: classpath:/sql/mysql.sql
+        url: jdbc:mysql://127.0.0.1:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+        username: root
+        password:
+        continueOnError: true
+        driver-class-name: com.mysql.jdbc.Driver
+        initial-size: 3
+        max-active: 20
+        min-idle: 5
+logging:
+    config: classpath:logback-stage.xml
