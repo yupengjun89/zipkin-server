@@ -9,7 +9,7 @@ spring:
                 sleuth:
                     destination: sleuth-stage
     datasource:
-#        schema: classpath:/sql/mysql.sql
+#        schema: classpath:/sql/init.sql
         url: jdbc:mysql://127.0.0.1:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
         username: root
         password:

@@ -34,7 +34,7 @@ spring:
                     zkNodes: 172.25.5.116,172.25.5.117,172.25.5.118
             bindings:
                 sleuth:
-                    destination: sleuth-prd
+                    destination: sleuth-test
     datasource:
         #schema: classpath:/sql/init.sql
         url: jdbc:mysql://127.0.0.1:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
