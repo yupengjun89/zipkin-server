@@ -18,3 +18,5 @@ spring:
         initial-size: 3
         max-active: 20
         min-idle: 5
+logging:
+  config: classpath:logback-dev.xml
