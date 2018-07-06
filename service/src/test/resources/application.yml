@@ -37,9 +37,9 @@ spring:
                     destination: sleuth-test
     datasource:
         #schema: classpath:/sql/init.sql
-        url: jdbc:mysql://127.0.0.1:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-        username: root
-        password:
+        url: jdbc:mysql://172.25.5.50:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+        username: snake_rw
+        password: snake_pwd
         continueOnError: true
         driver-class-name: com.mysql.jdbc.Driver
         initial-size: 100
