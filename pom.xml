@@ -7,6 +7,9 @@
     <artifactId>snake</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <modules>
+        <module>service</module>
+    </modules>
 
     <name>snake</name>
     <description>Demo project for Spring Boot</description>
