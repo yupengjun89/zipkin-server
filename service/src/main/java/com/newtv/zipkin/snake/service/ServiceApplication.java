@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.sleuth.zipkin.stream.EnableZipkinStreamServer;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.newtv.*"})
 @EnableZipkinStreamServer
 public class ServiceApplication {
 
