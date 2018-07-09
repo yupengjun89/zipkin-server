@@ -4,15 +4,9 @@
 
 <configuration scan="true" scanPeriod="60 seconds" debug="false">
 
-    <springProperty scope="context" name="springAppName" source="spring.application.name"/>
-
-    <property name="CONSOLE_LOG_PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [${springAppName:-},%X{X-B3-TraceId:-},%X{X-B3-SpanId:-},%X{X-Span-Export:-}] %-5level %logger - %msg%n"/>
-
     <appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
         <encoder charset="UTF-8"> <!-- encoder 可以指定字符集，对于中文输出有意义 -->
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger - %msg%n</pattern>
-            <!--<pattern>${CONSOLE_LOG_PATTERN}</pattern>-->
         </encoder>
     </appender>
 
