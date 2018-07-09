@@ -1,7 +1,3 @@
-eureka:
-    instance:
-          preferIpAddress: false
-
 spring:
     cloud:
         stream:
