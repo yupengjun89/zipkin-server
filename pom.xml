@@ -35,6 +35,7 @@
         <plugin.maven.resources.version>2.7</plugin.maven.resources.version>
         <plugin.restdocs.spring.asciidoctor.version>1.2.1.RELEASE</plugin.restdocs.spring.asciidoctor.version>
         <plugin.maven.rename.copy.version>1.0</plugin.maven.rename.copy.version>
+        <dinosaur.version>1.0.5</dinosaur.version>
         <start-class></start-class>
     </properties>
 
@@ -46,6 +47,11 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.newtv.zoo</groupId>
+                <artifactId>dinosaur</artifactId>
+                <version>${dinosaur.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
