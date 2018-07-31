@@ -3,8 +3,8 @@ spring:
         stream:
             bindings:
                 sleuth:
-                    destination: sleuth-stage
-                    group: sleuth-stage-group
+                    destination: sleuth-prd
+                    group: sleuth-prd-group
     datasource:
 #        schema: classpath:/sql/init.sql
         url: jdbc:mysql://172.25.5.50:3306/zipkin?useUnicode=true&amp;characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
